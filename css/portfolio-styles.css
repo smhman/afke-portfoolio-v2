@@ -1,0 +1,238 @@
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Stack child elements vertically */
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    text-align: center;
+    color: white;
+}
+
+.buttons{
+    border-top: 0px;
+    border-bottom: 1px solid white;
+    height: 20%;
+}
+
+.portfolio-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    height: 80%;
+    scroll-behavior: smooth;
+}
+.project{
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+    width: 70%;
+    max-height: 20vh;
+}
+.project-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    width: 60%;
+    height: inherit;
+    background-color: rgba(0,0,0,0.4);
+    padding: 1em;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.project-text *{
+    margin: 0px;
+}
+
+.project-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+.project-image img{
+    height: 100%;
+    border-radius: 10px;
+    aspect-ratio: 16 / 9 ;
+}
+
+@media screen and (max-width: 768px){
+    .portfolio-container{
+        overflow-y: auto;
+    }
+    .content{
+        width: 95%;
+        padding: 20px; 
+    }
+    .project{
+        flex-direction: column;
+        max-height: 20vh;
+    }
+    .project-text{
+        width: 100%;
+    }
+    .project-image img{
+        height: 100px;
+    }
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+html {
+    height: -webkit-fill-available;
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Courier Prime', monospace;
+    height: -webkit-fill-available;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    animation: fadeOut 2s ease forwards;
+    z-index: 1;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+#background-video {
+    width: 100vw;
+    height: 100svh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}  
+
+
+.content2 {
+    text-align: center;
+    color: black;
+    padding: 20px; /* Add padding for better spacing on mobile devices */
+}
+
+p {
+    font-size: 1em; /* Adjust font size for smaller screens */
+    margin-bottom: 1em;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+    padding-bottom: 5px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.btn {
+    text-decoration: none;
+    border-color: #747474;
+    background-color: #74747431;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 10px;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center; /* Center content vertically */
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    color: #747474;
+}
+
+.btn-text {
+    flex-grow: 2;
+}
+.buttons-small {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-small {
+    text-decoration: none;
+    border-color: #747474;
+    color: white;
+    padding: 20px;
+    height: 20px;
+    width: 20px;
+    margin: 0 10px;
+    font-size: 2em;
+    border-radius: 50px;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center; /* Center content vertically */
+}
+
+.btn-small:hover {
+    background-color: #ffffff;
+    color: #747474;
+}
+
+.btn-small-text {
+    flex-grow: 1;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.5em; /* Adjust font size for smaller screens */
+        margin-bottom: 0.2em;
+    }
+    
+    .buttons {
+        display: flex;
+        flex-direction: column; /* Stack child elements vertically */
+        align-items: center;
+        border-top: #ffffff solid 1px;
+        padding: 15px;
+    }
+    
+    .btn {
+        text-decoration: none;
+        border-color: #747474;
+        background-color: #74747431;
+        color: white;
+        padding: 10px 20px;
+        margin: 10px 0;
+        border-radius: 10px;
+        transition: background-color 0.2s ease;
+        display: flex;
+        align-items: center;
+    }
+    
+    .btn-text {
+        flex-grow: 2;
+    }
+}
