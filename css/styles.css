@@ -85,10 +85,13 @@ p {
 .buttons {
     display: flex;
     justify-content: center;
-    border-top: #ffffff solid 1px;
     padding-top: 25px;
     padding-left: 150px;
     padding-right: 150px;
+}
+
+hr{
+    width: 50%;
 }
 
 .btn {
